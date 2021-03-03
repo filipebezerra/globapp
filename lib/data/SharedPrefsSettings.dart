@@ -27,4 +27,12 @@ class SharedPrefsSettings {
   int getColor() {
     return _sharedPreferences.getInt(colorKey) ?? 0xff1976d2;
   }
+
+  Future setFontSize(double fontSize) async {
+    return await _sharedPreferences.setDouble(fontSizeKey, fontSize);
+  }
+
+  double getFontSize() {
+    return _sharedPreferences.getDouble(fontSizeKey) ?? 12;
+  }
 }
